@@ -1,0 +1,47 @@
+/* STELLAR ESPORTS — Xbox Elite-style accent layer
+   Uses GamepadViewer's native Xbox One geometry and input elements. */
+
+.edit .controller.xbox {
+  filter: drop-shadow(0 0 9px rgba(174, 47, 255, .42))
+          drop-shadow(0 0 22px rgba(112, 0, 255, .24));
+}
+
+.edit .xbox .trigger {
+  opacity: .16;
+  filter: drop-shadow(0 0 5px rgba(174, 47, 255, .8));
+}
+.edit .xbox .trigger.pressed {
+  opacity: 1;
+  filter: brightness(1.35) saturate(1.4)
+          drop-shadow(0 0 8px #a62dff)
+          drop-shadow(0 0 15px rgba(166, 45, 255, .9));
+}
+
+.edit .xbox .bumper {
+  filter: drop-shadow(0 0 4px rgba(174, 47, 255, .55));
+}
+.edit .xbox .bumper.pressed {
+  opacity: 1;
+  filter: brightness(1.4) drop-shadow(0 0 8px #a62dff);
+}
+
+.edit .xbox .button,
+.edit .xbox .face,
+.edit .xbox .stick {
+  filter: drop-shadow(0 0 3px rgba(166, 45, 255, .48));
+}
+.edit .xbox .button.pressed,
+.edit .xbox .face.pressed,
+.edit .xbox .stick.pressed {
+  opacity: 1;
+  filter: brightness(1.4) saturate(1.4)
+          drop-shadow(0 0 8px #b54cff)
+          drop-shadow(0 0 14px rgba(166, 45, 255, .9));
+}
+
+.edit .xbox .arrows,
+.edit .xbox .abxy,
+.edit .xbox .dpad,
+.edit .xbox .sticks {
+  filter: drop-shadow(0 0 3px rgba(166, 45, 255, .18));
+}

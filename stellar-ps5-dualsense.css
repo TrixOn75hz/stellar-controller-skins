@@ -1,0 +1,96 @@
+/* STELLAR ESPORTS — PlayStation skin accent layer
+   Intended for GamepadViewer editcss= with the built-in PlayStation skin.
+   Keeps the viewer's native geometry and live input elements. */
+
+.edit .controller.ds4,
+.edit .controller.ds5,
+.edit .controller.ps5 {
+  filter: drop-shadow(0 0 7px rgba(166, 45, 255, .34))
+          drop-shadow(0 0 18px rgba(119, 0, 255, .20));
+}
+
+.edit .ds4 .trigger,
+.edit .ds5 .trigger,
+.edit .ps5 .trigger {
+  opacity: .14;
+  filter: drop-shadow(0 0 4px rgba(182, 70, 255, .8));
+}
+.edit .ds4 .trigger.pressed,
+.edit .ds5 .trigger.pressed,
+.edit .ps5 .trigger.pressed {
+  opacity: 1;
+  filter: brightness(1.3) saturate(1.35)
+          drop-shadow(0 0 7px #a62dff)
+          drop-shadow(0 0 14px rgba(166, 45, 255, .85));
+}
+
+.edit .ds4 .bumper,
+.edit .ds5 .bumper,
+.edit .ps5 .bumper {
+  filter: drop-shadow(0 0 3px rgba(166, 45, 255, .6));
+}
+.edit .ds4 .bumper.pressed,
+.edit .ds5 .bumper.pressed,
+.edit .ps5 .bumper.pressed {
+  opacity: 1;
+  filter: brightness(1.35) drop-shadow(0 0 8px #a62dff);
+}
+
+.edit .ds4 .button,
+.edit .ds5 .button,
+.edit .ps5 .button,
+.edit .ds4 .face,
+.edit .ds5 .face,
+.edit .ps5 .face {
+  filter: drop-shadow(0 0 2px rgba(153, 55, 255, .45));
+}
+.edit .ds4 .button.pressed,
+.edit .ds5 .button.pressed,
+.edit .ds4 .face.pressed,
+.edit .ds5 .face.pressed,
+.edit .ps5 .button.pressed,
+.edit .ps5 .face.pressed {
+  filter: brightness(1.4) saturate(1.3)
+          drop-shadow(0 0 7px #b54cff)
+          drop-shadow(0 0 13px rgba(166, 45, 255, .9));
+}
+
+.edit .ds4 .stick,
+.edit .ds5 .stick,
+.edit .ps5 .stick {
+  filter: drop-shadow(0 0 4px rgba(168, 61, 255, .5));
+}
+.edit .ds4 .stick.pressed,
+.edit .ds5 .stick.pressed,
+.edit .ps5 .stick.pressed {
+  filter: brightness(1.3) drop-shadow(0 0 9px #a62dff);
+}
+
+.edit .ds4 .touchpad.pressed,
+.edit .ds5 .touchpad.pressed,
+.edit .ps5 .touchpad.pressed,
+.edit .ds4 .meta.pressed,
+.edit .ds5 .meta.pressed,
+.edit .ps5 .meta.pressed {
+  filter: brightness(1.4) drop-shadow(0 0 9px #a62dff);
+}
+
+/* DualSense — Stellar violet trim.
+   GamepadViewer's PlayStation layout is used so live input classes remain native.
+   On builds that expose .ds5/.ps5, those selectors are included as well. */
+.edit .controller.ds4,
+.edit .controller.ds5,
+.edit .controller.ps5 {
+  filter: drop-shadow(0 0 9px rgba(186, 55, 255, .42))
+          drop-shadow(0 0 22px rgba(111, 0, 255, .24));
+}
+.edit .ds4 .triggers,
+.edit .ds5 .triggers,
+.edit .ps5 .triggers {
+  filter: drop-shadow(0 0 6px rgba(190, 75, 255, .34));
+}
+.edit .ds4 .touchpad,
+.edit .ds5 .touchpad,
+.edit .ps5 .touchpad {
+  filter: drop-shadow(0 0 5px rgba(166, 45, 255, .45));
+}

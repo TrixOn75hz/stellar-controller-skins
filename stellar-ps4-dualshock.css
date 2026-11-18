@@ -1,0 +1,92 @@
+/* STELLAR ESPORTS — PlayStation skin accent layer
+   Intended for GamepadViewer editcss= with the built-in PlayStation skin.
+   Keeps the viewer's native geometry and live input elements. */
+
+.edit .controller.ds4,
+.edit .controller.ds5,
+.edit .controller.ps5 {
+  filter: drop-shadow(0 0 7px rgba(166, 45, 255, .34))
+          drop-shadow(0 0 18px rgba(119, 0, 255, .20));
+}
+
+.edit .ds4 .trigger,
+.edit .ds5 .trigger,
+.edit .ps5 .trigger {
+  opacity: .14;
+  filter: drop-shadow(0 0 4px rgba(182, 70, 255, .8));
+}
+.edit .ds4 .trigger.pressed,
+.edit .ds5 .trigger.pressed,
+.edit .ps5 .trigger.pressed {
+  opacity: 1;
+  filter: brightness(1.3) saturate(1.35)
+          drop-shadow(0 0 7px #a62dff)
+          drop-shadow(0 0 14px rgba(166, 45, 255, .85));
+}
+
+.edit .ds4 .bumper,
+.edit .ds5 .bumper,
+.edit .ps5 .bumper {
+  filter: drop-shadow(0 0 3px rgba(166, 45, 255, .6));
+}
+.edit .ds4 .bumper.pressed,
+.edit .ds5 .bumper.pressed,
+.edit .ps5 .bumper.pressed {
+  opacity: 1;
+  filter: brightness(1.35) drop-shadow(0 0 8px #a62dff);
+}
+
+.edit .ds4 .button,
+.edit .ds5 .button,
+.edit .ps5 .button,
+.edit .ds4 .face,
+.edit .ds5 .face,
+.edit .ps5 .face {
+  filter: drop-shadow(0 0 2px rgba(153, 55, 255, .45));
+}
+.edit .ds4 .button.pressed,
+.edit .ds5 .button.pressed,
+.edit .ds4 .face.pressed,
+.edit .ds5 .face.pressed,
+.edit .ps5 .button.pressed,
+.edit .ps5 .face.pressed {
+  filter: brightness(1.4) saturate(1.3)
+          drop-shadow(0 0 7px #b54cff)
+          drop-shadow(0 0 13px rgba(166, 45, 255, .9));
+}
+
+.edit .ds4 .stick,
+.edit .ds5 .stick,
+.edit .ps5 .stick {
+  filter: drop-shadow(0 0 4px rgba(168, 61, 255, .5));
+}
+.edit .ds4 .stick.pressed,
+.edit .ds5 .stick.pressed,
+.edit .ps5 .stick.pressed {
+  filter: brightness(1.3) drop-shadow(0 0 9px #a62dff);
+}
+
+.edit .ds4 .touchpad.pressed,
+.edit .ds5 .touchpad.pressed,
+.edit .ps5 .touchpad.pressed,
+.edit .ds4 .meta.pressed,
+.edit .ds5 .meta.pressed,
+.edit .ps5 .meta.pressed {
+  filter: brightness(1.4) drop-shadow(0 0 9px #a62dff);
+}
+
+/* DualShock 4 — Stellar violet trim */
+.edit .controller.ds4 {
+  filter: drop-shadow(0 0 8px rgba(178, 49, 255, .38))
+          drop-shadow(0 0 20px rgba(112, 0, 255, .20));
+}
+.edit .ds4 .triggers {
+  /* Native GamepadViewer trigger elements stay at the top shoulders. */
+  filter: drop-shadow(0 0 5px rgba(178, 49, 255, .28));
+}
+.edit .ds4 .arrows,
+.edit .ds4 .abxy,
+.edit .ds4 .dpad,
+.edit .ds4 .sticks {
+  filter: drop-shadow(0 0 3px rgba(156, 54, 255, .16));
+}
