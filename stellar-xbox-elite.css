@@ -1,5 +1,92 @@
+/* STELLAR ESPORTS — Xbox Elite Series 2
+   Gamepad Viewer accent layer.
+   Keeps the native Xbox controller artwork and live input/pressed classes intact.
+   Scoped to this skin's .edit wrapper; no PlayStation files are changed. */
 
-/* STELLAR CSS LOADING TEST */
-.edit {
-  filter: hue-rotate(260deg) !important;
+:root {
+  --stellar-violet: #a52cff;
+  --stellar-purple: #7600ff;
+  --stellar-lilac: #d7a6ff;
+  --stellar-glow: rgba(165, 44, 255, .72);
 }
+
+/* Black controller silhouette with a restrained violet edge glow. */
+.edit .controller {
+  filter:
+    drop-shadow(0 0 5px rgba(165, 44, 255, .36))
+    drop-shadow(0 0 14px rgba(118, 0, 255, .24));
+}
+
+/* Native shoulder / trigger controls. */
+.edit .controller .trigger,
+.edit .controller .bumper {
+  filter:
+    drop-shadow(0 0 3px rgba(165, 44, 255, .52));
+  transition: filter .12s ease, opacity .12s ease;
+}
+
+.edit .controller .trigger.pressed,
+.edit .controller .bumper.pressed {
+  filter:
+    brightness(1.35) saturate(1.25)
+    drop-shadow(0 0 7px var(--stellar-violet))
+    drop-shadow(0 0 13px var(--stellar-glow));
+}
+
+/* ABXY cluster: violet illumination while preserving the native button labels. */
+.edit .controller .abxy,
+.edit .controller .button,
+.edit .controller .face {
+  filter: drop-shadow(0 0 3px rgba(165, 44, 255, .48));
+  transition: filter .12s ease;
+}
+
+.edit .controller .abxy .button.pressed,
+.edit .controller .button.pressed,
+.edit .controller .face.pressed {
+  filter:
+    brightness(1.45) saturate(1.2)
+    drop-shadow(0 0 7px var(--stellar-violet))
+    drop-shadow(0 0 14px rgba(165, 44, 255, .9));
+}
+
+/* Illuminated thumbstick wells and responsive stick caps. */
+.edit .controller .sticks,
+.edit .controller .stick {
+  filter:
+    drop-shadow(0 0 4px rgba(165, 44, 255, .52))
+    drop-shadow(0 0 9px rgba(118, 0, 255, .24));
+  transition: filter .12s ease;
+}
+
+.edit .controller .stick.pressed {
+  filter:
+    brightness(1.3)
+    drop-shadow(0 0 8px var(--stellar-violet))
+    drop-shadow(0 0 15px rgba(165, 44, 255, .88));
+}
+
+/* D-pad and center controls. */
+.edit .controller .dpad,
+.edit .controller .arrows,
+.edit .controller .meta,
+.edit .controller .select,
+.edit .controller .start {
+  filter: drop-shadow(0 0 3px rgba(165, 44, 255, .4));
+  transition: filter .12s ease;
+}
+
+.edit .controller .dpad .pressed,
+.edit .controller .arrows .pressed,
+.edit .controller .meta.pressed,
+.edit .controller .select.pressed,
+.edit .controller .start.pressed {
+  filter:
+    brightness(1.4)
+    drop-shadow(0 0 7px var(--stellar-violet))
+    drop-shadow(0 0 12px rgba(165, 44, 255, .85));
+}
+
+/* Preserve the native Xbox silhouette, flat bridge geometry, and live hit areas.
+   This stylesheet intentionally adds lighting only; it does not replace the
+   controller SVG or draw a fake static controller over the interactive one. */
